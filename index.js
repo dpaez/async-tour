@@ -1,8 +1,10 @@
 var css = require('sheetify')
 var choo = require('choo')
-var store = require('./stores/clicks')
+var chooSlides = require('choo-slides')
+var slides = require('./slides')
 
 css('tachyons')
+css('choo-slides')
 
 var app = choo()
 if (process.env.NODE_ENV !== 'production') {
@@ -13,10 +15,7 @@ if (process.env.NODE_ENV !== 'production') {
   // app.use(require('choo-service-worker')())
 }
 
-app.use(store)
-
-app.route('/', require('./views/main'))
-app.route('/*', require('./views/404'))
+app.use(chooSlides({ slides }))
 
 if (!module.parent) app.mount('body')
 else module.exports = app
