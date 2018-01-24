@@ -8,6 +8,8 @@
     "inspect": "bankai inspect index.js",
     "start": "bankai start index.js",
     "test": "standard && npm run test-deps",
+    "generate-exercises": "split-guide generate --silent-success",
+    "workshop": "jest",
     "test-deps": "dependency-check . && dependency-check . --extra --no-dev -i tachyons"
   },
   "dependencies": {
@@ -21,6 +23,14 @@
     "bankai": "^9.0.0-rc9",
     "choo-scaffold": "^1.1.2",
     "dependency-check": "^2.9.1",
+    "jest": "^22.0.4",
+    "split-guide": "^3.0.0",
     "standard": "^10.0.3"
+  },
+  "jest": {
+    "testEnvironment": "node",
+    "roots": [
+      "exercises"
+    ]
   }
 }
