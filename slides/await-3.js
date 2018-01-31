@@ -20,20 +20,20 @@ function Async3(state, emitter) {
     return html`
     <main class="">
         ${Nav(state, emitter)}
-        <article class="flex">
+        <article class="flex items-center">
             <ul class=" list pl0 f2-l f3 light-gray center">
                 <li class="pa3 pa4-ns">
-                <pre class="code bg-black-80 pa2 f3 center green">
+                <pre class="code bg-black-80 pa3 f3 f2-l center green">
 <code><span class="blue">async</span> function getData(userId){
-    const response = <span class="pink">await</span> fetch('https://myendpoint.com/' + userId);
-    const result = <span class="pink">await</span> response.json();
-    return result;
+  const response = <span class="pink">await</span> fetch('https://example.com/' + userId);
+  const result = <span class="pink">await</span> response.json();
+  return result;
 }
 try {
-    const user = getData(123);
-    // do something with user...
+  const user = getData(123);
+  // do something with user...
 } catch(err) {
-    console.error(err):
+  console.error(err):
 }
 </code>
                 </pre>
@@ -42,18 +42,18 @@ try {
                     VS
                 </li>
                 <li class="pa3 pa4-ns">
-                <pre class="code bg-black-80 pa2 f3 center green">
+                <pre class="code bg-black-80 pa3 f3 f2-l center green">
 <code>function getData(userId){
-    return fetch('https://myendpoint.com/' + userId)
-        .then(function (response) {
-            return response.json()
-        })
+  return fetch('https://example.com/' + userId)
+    .then(function (response) {
+      return response.json()
+    })
 }
 getData(123)
-    .then(function(user) {
-        // do something with user...
-    })
-    .catch(console.error);
+  .then(function(user) {
+    // do something with user...
+  })
+  .catch(console.error);
 </code>
                 </pre>
                 </li>

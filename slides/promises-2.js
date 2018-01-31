@@ -19,10 +19,10 @@ function Promises2 (state, emitter) {
     return html`
     <main class="">
         ${Nav(state, emitter)}
-        <article class="flex">
+        <article class="flex items-center ">
             <ul class="list pl0 center">
                 <li>
-                    <pre class="code bg-black-80 pa2 f3 center green">
+                    <pre class="code bg-black-80 pa4 f3 f2-l center green">
 <code>function getA(){
     return Promise.resolve('A');
 }
@@ -34,9 +34,11 @@ Promise.all([
     getA(),
     getB()
 ])
-.<span class="yellow">all</span>(function onFulfilledAll(results){ ... }) // <span class="i">all</span> actua como barrera
+.<span class="yellow">all</span>(function onFulfilledAll(results){ ... })
+// <span class="i">all</span> actua como barrera
 .<span class="red">catch</span>(function onRejected(err){ ... })
-// ante el primer error se ejecuta el catch y termina la ejecución</code>
+// ante el primer error se ejecuta el catch 
+// y termina la ejecución</code>
                 </pre>
             </li>
             </ul>

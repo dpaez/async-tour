@@ -21,14 +21,14 @@ function Async2(state, emitter) {
     return html`
     <main class="">
         ${Nav(state, emitter)}
-        <article class="flex">
-            <ul class=" list pl0 f2-l f3 light-gray center">
+        <article class="flex items-center vh-75">
+            <ul class=" list pl0 light-gray center">
                 <li class="pa3 pa4-ns">
-                <pre class="code bg-black-80 pa2 f3 center green">
+                <pre class="code bg-black-80 pa4 f3 f2-l center green">
 <code><span class="blue">async</span> function getData(userId){
-    const response = <span class="pink">await</span> fetch('https://myendpoint.com/' + userId);
-    const result = <span class="pink">await</span> response.json();
-    return result;
+  const response = <span class="pink">await</span> fetch('https://example.com/' + userId);
+  const result = <span class="pink">await</span> response.json();
+  return result;
 }
 const user = getData(123);
 // do something with user...

@@ -24,16 +24,17 @@ function Async1(state, emitter) {
     return html`
     <main class="">
         ${Nav(state, emitter)}
-        <article class="flex">
-            <ul class=" list pl0 f2-l f3 light-gray measure center">
+        <article class="flex items-center vh-75">
+            <ul class=" list pl0 f1 f3-m light-gray measure measure-wide-l center">
                 <li class="pa3 pa4-ns bb b--black-10">
                     Objetivo: Hacer que operaciones asíncronas <i>parezcan</i> síncronas.
                 </li>
                 <li class="pa3 pa4-ns bb b--black-10">
-                    Nueva sintáxis: <code>async</await> & <code>await</code>
+                    Nueva sintáxis: <code class="pa1 green bg-black-80">async</await> & <code class="pa1 green bg-black-80">await</code>
                 </li>
                 <li class="pa3 pa4-ns">
-                    <b>¿Cómo se usa?</b> Dentro de una función marcada como <code>async</code> podemos colocar un <code>await</code> delante de una función que retorne una promesa. Cuando haces esto, la ejecución de la función <code>async</code> es pausada hasta que la promesa se resuelve.
+                    <b>¿Cómo se usa?</b> Dentro de una función marcada como <code class="pa1 green bg-black-80">async</code> podemos colocar un <code class="pa1 green bg-black-80">await</code> delante de una función que retorne una promesa. <br>
+                    Cuando hacemos esto, la ejecución de la función <code class="pa1 green bg-black-80">async</code> es pausada hasta que la promesa se resuelve.
                 </li>
             </ul>
         </article>

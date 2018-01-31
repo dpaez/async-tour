@@ -20,10 +20,10 @@ function Callbacks (state, emitter) {
     return html`
     <main class="flex flex-wrap">
         ${Nav(state, emitter)}
-        <article class="flex items-center center">
+        <article class="flex items-center center vh-75">
             <ul class="list pl0 center">
                 <li>
-                    <pre class="code bg-black-80 pa2 f3 center green">
+                    <pre class="code bg-black-80 pa4 f3 f2-l center green">
 function doSomethingAsync(params, callbackFn) {
     // async action...
     if (err){
