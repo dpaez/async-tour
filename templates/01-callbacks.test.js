@@ -6,8 +6,17 @@ function getFnName(fn) {
 }
 
 function verifyUser(options, cb){
-    setTimeout()
+    setTimeout(cb(null, { name:'pepe', id:5 }), 2000);
 }
+
+function getRoles(options, cb){
+    setTimeout(cb(null, { permissions: ['read'] }), 1000);
+}
+
+function listResults(options, cb){
+    setTimeout(cb(null, ['result1', 'result2', 'result3']), 1500);
+}
+/** END utility fns  */
 
 test('evitar funciones anonimas: dale un nombre', () => {
     // WORKSHOP_START
@@ -66,6 +75,9 @@ test('error handling: capturar el error cuando usamos callbacks', () => {
 
 test('refactor: nombrar funciones y evitar callback hell', () => {
 
+    // WORKSHOP_START
+    // Objetivo: refactorear para mejorar la legibilidad del código y evitar callback hell.
+    // WORKSHOP_END
     expect.assertions(4);
 
     const input = {
@@ -74,7 +86,6 @@ test('refactor: nombrar funciones y evitar callback hell', () => {
     }
 
     // FINAL_START
-
     function verifyUserCb(err, user){
         expect(getFnName(this).toBe('verifyUserCb'));
         if (err) {
@@ -129,7 +140,7 @@ test('refactor: nombrar funciones y evitar callback hell', () => {
                 console.error(err);
                 return err;
             }
-            if (roles === 'read'){
+            if (roles.permissions.indexOf('read') > -1){
                 listResults(user.id, function (err, results){
                     expect(getFnName(this).toBe('listResultsCb'));
                     if (err) {
