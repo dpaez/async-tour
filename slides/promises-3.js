@@ -8,6 +8,9 @@ function Notes() {
         <div>
             <ul class="list pl0">
                 <li class="f5 lh-copy bb b--white-30">
+                Recurso: <a href="http://2ality.com/2016/10/understanding-promises.html" class="link gray no-underline underline-hover" rel="noopener noreferrer" target="_blank">
+                Entendiendo promesas
+                </a>
                 </li>
             </ul>
         </div>
