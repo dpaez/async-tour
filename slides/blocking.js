@@ -47,18 +47,18 @@ function AboutAsyncDemo (state, emitter) {
     return html`
     <main class="">
         ${Nav(state, emitter)}
-        <article class="flex flex-column">
-            <h3 class="f2-m f-headline-l fw2 mv3">Bloqueando el event loop</h3>
-            <section class="center mt4">
+        <article class="flex flex-column dt w-100">
+            <h3 class="f2-m f-headline-l fw2 mv3 dtc v-mid w-50 tc">Bloqueando el event loop</h3>
+            <section class="center mt4 dtc v-mid vh-75">
                 <div class="pa2">
-                    <button onclick=${slowTask} class="f6 link dim ph3 pv2 mb2 mr3 dib white bg-red">
+                    <button onclick=${slowTask} class="f6 f2-l link dim ph3 pv2 mb2 mr3 dib white bg-red">
                         SLOW TASK :(
                     </button>
 
-                    <button onclick=${increment} class="f6 link dim ph3 pv2 mb2 mr3 dib white bg-mid-gray">
+                    <button onclick=${increment} class="f6 f2-l link dim ph3 pv2 mb2 mr3 dib white bg-mid-gray">
                         +1
                     </button>
-                    <button onclick=${decrement} class="f6 link dim ph3 pv2 mb2 mr3 dib white bg-mid-gray">
+                    <button onclick=${decrement} class="f6 f2-l link dim ph3 pv2 mb2 mr3 dib white bg-mid-gray">
                         -1
                     </button>
                 </div>

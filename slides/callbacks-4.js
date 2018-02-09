@@ -48,10 +48,10 @@ function Callbacks4 (state, emitter) {
     return html`
     <main class="">
         ${Nav(state, emitter)}
-        <article class="flex">
+        <article class="flex items-center vh-75">
             <ul class="list pl0 center">
                 <li>
-                    <pre class="code bg-black-80 pa2 f3 center green">${getDemoCode()}</pre>
+                    <pre class="code bg-black-80 pa4 f3 f2-l center green">${getDemoCode()}</pre>
                 </li>
             </ul>
         </article>

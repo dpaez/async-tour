@@ -26,12 +26,13 @@ function AboutAsync (state, emitter) {
     return html`
     <main class="">
         ${Nav(state, emitter)}
-        <article class="flex">
-            <h3 class="f2-m f-headline-l fw2 mv3">Concurrencia en JS:</h3>
-            <ul class="list pl0 f3 f2-l light-gray measure center">
-                <li class="pa3 pa4-ns bb b--black-10">
-                    <img src="https://developer.mozilla.org/files/4617/default.svg" class="mw-100" alt="event loop según mozilla">
-                </li>
+        <div class="flex items-center">
+        <article class="dt w-100">
+            <h3 class="f2 f-headline-l fw2 mv3 dtc v-mid tc w-50">
+                Concurrencia en JS
+                <img src="https://developer.mozilla.org/files/4617/default.svg" class="db center mw-100" alt="event loop según mozilla">
+            </h3>
+            <ul class="list pl0 f2 f1-l light-gray measure">
                 <li class="pa3 pa4-ns bb b--black-10">
                     JS es single-threaded === 1 call stack === 1 <b>tarea</b> a la vez.
                 </li>
@@ -58,6 +59,7 @@ function AboutAsync (state, emitter) {
                 </li>
             </ul>
         </article>
+        </div>
     </main>
     `
 }

@@ -8,8 +8,8 @@ function Notes() {
         <div>
             <ul class="list pl0">
                 <li class="f5 lh-copy bb b--white-30">
-                Recurso: <a href="http://2ality.com/2016/10/understanding-promises.html" class="link gray no-underline underline-hover" rel="noopener noreferrer" target="_blank">
-                Entendiendo promesas
+                Ver mas: <a href="http://2ality.com/2016/10/understanding-promises.html" class="link gray no-underline underline-hover" rel="noopener noreferrer" target="_blank">
+                Three ways of understanding promises
                 </a>
                 </li>
             </ul>
@@ -22,9 +22,9 @@ function Promises3 (state, emitter) {
     return html`
     <main class="">
         ${Nav(state, emitter)}
-        <article class="flex flex-column">
-            <h3 class="f2-m f-headline-l fw2 mv3">Consideraciones:</h3>
-            <ul class="list pl0 f3 f2-l light-gray center">
+        <article class="flex  w-100 items-center vh-75">
+            <h3 class="f2-m f-headline-l fw2 mv3 tc w-50">Consideraciones</h3>
+            <ul class="list pl0 f3 f2-l light-gray">
                 <li class="pa3 pa4-ns bb b--black-10">
                     Una promesa se comporta como una función, siempre esperamos un resultado.
                 </li>
