@@ -6,57 +6,59 @@ function getFnName(fn) {
 }
 
 function verifyUser(options, cb){
-    setTimeout()
+    setTimeout(() => { cb(null, { name:'pepe', id:5 }) }, 2000);
 }
+
+function getRoles(options, cb){
+    setTimeout(() => { cb(null, { permissions: ['read'] }) }, 1000);
+}
+
+function listResults(cb){
+    setTimeout(() => { cb(null, {status: 200, items: [101,202,303]}) }, 1500);
+}
+/** END utility fns  */
 
 test('evitar funciones anonimas: dale un nombre', () => {
 
     function sumar (x,y) {
         return x + y;
     }
-
     expect(getFnName(sumar)).toBe('sumar');
+    expect(sumar(1,2)).toBe(3);
 })
 
 test('error handling: capturar el error cuando usamos callbacks', () => {
-    function failedHttp(url, cb) {
-        function getRandomInt(min, max) {
-            return Math.floor(Math.random() * (max - min)) + min;
-        }
 
-        let error = null;
-        let response = { hola: 'mundo' };
-        if (getRandomInt(0,2) === 0){
-            error = new Error('failedHttp: bad request');
-            response = null;
-        }
+    function failedHttp(url, cb) {
+        var error = new Error('failedHttp: bad request');
+        var response = null;
         cb(error, response);
     }
 
-    expect.assertions(1);
+    expect.assertions(2);
 
     failedHttp({ url:'http://thecatapi.com/?id=6bd' }, function (err, response){
         if (err){
-            expect(err.message).toBe.('failedHttp: bad request');
+            expect(err).toBeDefined();
+            expect(err.message).toBe('failedHttp: bad request');
             return;
         }
         return response;
     });
 
-}
+})
 
-test('refactor: nombrar funciones y evitar callback hell', () => {
+test('refactor: nombrar funciones y evitar callback hell', (done) => {
 
-    expect.assertions(4);
 
     const input = {
         user: 'pepe',
         pwd: 'MyS3cr3t!'
     }
 
-
     function verifyUserCb(err, user){
-        expect(getFnName(this).toBe('verifyUserCb'));
+        console.log('verifyUserCb')
+        expect(getFnName(verifyUserCb)).toBe('verifyUserCb');
         if (err) {
             console.error(err);
             return err;
@@ -65,20 +67,22 @@ test('refactor: nombrar funciones y evitar callback hell', () => {
         getRoles(user.id, getRolesCb);
     }
     function getRolesCb(err, roles){
-        expect(getFnName(this).toBe('getRolesCb'));
+        console.log('getRolesCb')
+        expect(getFnName(getRolesCb)).toBe('getRolesCb');
         if (err) {
             console.error(err);
             return err;
         }
-        if (roles === 'read'){
-            listResults(user.id, listResultsCb);
+        if (roles.permissions.includes('read')){
+            listResults(listResultsCb);
         } else {
             return new Error('access denied');
         }
     }
 
     function listResultsCb(err, results){
-        expect(getFnName(this).toBe('listResultsCb'));
+        console.log('listResultsCb')
+        expect(getFnName(listResultsCb)).toBe('listResultsCb');
         if (err) {
             console.error(err);
             return err;
@@ -88,7 +92,7 @@ test('refactor: nombrar funciones y evitar callback hell', () => {
             status: 200,
             items: [101,202,303]
         })
-        return results;
+        done();
     }
 
     verifyUser(input, verifyUserCb);
