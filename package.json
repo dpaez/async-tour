@@ -13,6 +13,7 @@
     "test-deps": "dependency-check . && dependency-check . --extra --no-dev -i tachyons"
   },
   "dependencies": {
+    "@geut/choo-slides": "^1.0.0",
     "choo": "^6.4.2",
     "choo-devtools": "^2.1.0",
     "choo-service-worker": "^2.3.0",

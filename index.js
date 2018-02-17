@@ -1,10 +1,10 @@
 var css = require('sheetify')
 var choo = require('choo')
-var chooSlides = require('choo-slides')
+var chooSlides = require('@geut/choo-slides')
 var slides = require('./slides')
 
 css('tachyons')
-css('choo-slides')
+css('@geut/choo-slides')
 
 var app = choo()
 if (process.env.NODE_ENV !== 'production') {
