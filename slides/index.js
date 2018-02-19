@@ -15,7 +15,9 @@ module.exports = [
     require('./await-intro'),
     require('./await-1'),
     require('./await-2'),
+    require('./await-2.1'),
     require('./await-3'),
     require('./await-4'),
+    require('./await-5'),
     require('./questions'),
 ]

@@ -30,11 +30,14 @@ function Async4(state, emitter) {
   return result;
 }
 // sync, una busqueda desp de la otra. :(
-const user1 = getData(123);
-const user2 = getData(456);
-const user3 = getData(789);
-
-// do something with the users...
+getData(123)
+    .then(function (user123){
+        return [].concat(users123).concat(getData(456))
+    })
+    .then(function (usersPrev){
+        const users = usersPrev.concat(getData(789));
+        // do something with users
+    });
 </code>
                 </pre>
                 </li>

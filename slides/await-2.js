@@ -30,8 +30,15 @@ function Async2(state, emitter) {
   const result = <span class="pink">await</span> response.json();
   return result;
 }
-const user = getData(123);
-// do something with user...
+
+getData(123)
+  .then(function (res) {
+    console.log('El resultado es', res);
+    // do something with user...
+  })
+  .catch(function (err) {
+    console.log(err);
+  })
 </code>
                 </pre>
                 </li>

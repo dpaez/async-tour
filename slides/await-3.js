@@ -29,12 +29,6 @@ function Async3(state, emitter) {
   const result = <span class="pink">await</span> response.json();
   return result;
 }
-try {
-  const user = getData(123);
-  // do something with user...
-} catch(err) {
-  console.error(err):
-}
 </code>
                 </pre>
                 </li>
@@ -49,11 +43,6 @@ try {
       return response.json()
     })
 }
-getData(123)
-  .then(function(user) {
-    // do something with user...
-  })
-  .catch(console.error);
 </code>
                 </pre>
                 </li>
