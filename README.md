@@ -1,6 +1,8 @@
 # async-tour
 Un recorrido sobre herramientas para manejar operaciones asincrónicas
 
+:arrow_forward: **LIVE:** https://async-tour.netlify.com/
+
 ## Pre-requisitos :warning:
 
 Para poder realizar el workshop vamos a necesitar node LTS, esto es node >= 8.
