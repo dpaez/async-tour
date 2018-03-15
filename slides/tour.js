@@ -21,17 +21,17 @@ function Tour (state, emitter) {
             <article class="vh-100">
                 <div role="img" aria-label="Callbacks" class="vh-100 dt fl w-33" style="background: url(https://images.unsplash.com/photo-1501533123-e62013cabb4f?dpr=1&auto=format&fit=crop&w=551&q=80&cs=tinysrgb&ixid=dW5zcGxhc2guY29tOzs7Ozs%3D) no-repeat center center; background-size: cover;">
                     <a href="/4" class="dtc v-mid link overflow-hidden">
-                        <h2 class="bg-black-70 white-90 f2 f-headline-l pa2 grow-large tc">Callbacks</h2>
+                        <h2 class="bg-black-70 white-90 f2 f-subheadline-l pa2 grow-large tc">Callbacks</h2>
                     </a>
                 </div>
                 <div role="img" aria-label="Promises" class="vh-100 dt fl w-34 " style="background: url(https://images.unsplash.com/photo-1500487003906-9baadc8d610d?dpr=1&auto=format&fit=crop&w=551&q=80&cs=tinysrgb&ixid=dW5zcGxhc2guY29tOzs7Ozs%3D) no-repeat center center; background-size: cover;">
                     <a href="/9" class="dtc v-mid link overflow-hidden">
-                        <h2 class="bg-black-70 white-90 f2 f-headline-l pa2 grow-large tc">Promises</h2>
+                        <h2 class="bg-black-70 white-90 f2 f-subheadline-l pa2 grow-large tc">Promises</h2>
                     </a>
                 </div>
                 <div role="img" aria-label="Async/Await" class="vh-100 dt fl w-33" style="background: url(https://images.unsplash.com/photo-1506929562872-bb421503ef21?dpr=1&auto=format&fit=crop&w=551&q=80&cs=tinysrgb&ixid=dW5zcGxhc2guY29tOzs7Ozs%3D) no-repeat center center; background-size: cover;">
                     <a href="/13" class="dtc v-mid link overflow-hidden">
-                        <h2 class="bg-black-70 white-90 f2 f-headline-l pa2 grow-large tc">
+                        <h2 class="bg-black-70 white-90 f2 f-subheadline-l pa2 grow-large tc">
                         Async/<br>
                         Await
                         </h2>

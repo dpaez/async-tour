@@ -23,7 +23,7 @@ function Async3(state, emitter) {
         <article class="flex items-center">
             <ul class=" list pl0 f2-l f3 light-gray center">
                 <li class="pa3 pa4-ns">
-                <pre class="code bg-black-80 pa3 f3 f2-l center green">
+                <pre class="code bg-black-80 pa3 f4 f3-l center green">
 <code><span class="blue">async</span> function getData(userId){
   const response = <span class="pink">await</span> fetch('https://example.com/' + userId);
   const result = <span class="pink">await</span> response.json();
@@ -36,7 +36,7 @@ function Async3(state, emitter) {
                     VS
                 </li>
                 <li class="pa3 pa4-ns">
-                <pre class="code bg-black-80 pa3 f3 f2-l center green">
+                <pre class="code bg-black-80 pa3 f4 f3-l center green">
 <code>function getData(userId){
   return fetch('https://example.com/' + userId)
     .then(function (response) {

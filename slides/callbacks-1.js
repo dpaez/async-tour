@@ -23,7 +23,7 @@ function Callbacks (state, emitter) {
         <article class="flex items-center center vh-75">
             <ul class="list pl0 center">
                 <li>
-                    <pre class="code bg-black-80 pa4 f3 f2-l center green">
+                    <pre class="code bg-black-80 pa4 f4 f3-l center green">
 function doSomethingAsync(params, callbackFn) {
     // async action...
     if (err){

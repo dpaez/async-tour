@@ -14,6 +14,7 @@
   },
   "dependencies": {
     "@geut/choo-slides": "^1.0.0",
+    "bankai": "^8.1.1",
     "choo": "^6.4.2",
     "choo-devtools": "^2.1.0",
     "choo-service-worker": "^2.3.0",
@@ -21,7 +22,6 @@
     "tachyons": "^4.8.1"
   },
   "devDependencies": {
-    "bankai": "^9.0.0-rc9",
     "choo-scaffold": "^1.1.2",
     "dependency-check": "^2.9.1",
     "jest": "^22.0.4",

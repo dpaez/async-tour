@@ -11,7 +11,7 @@ function Async21(state, emitter) {
         <article class="flex items-center vh-75">
             <ul class=" list pl0 light-gray center">
                 <li class="pa3 pa4-ns">
-                <pre class="code bg-black-80 pa4 f3 f2-l center green">
+                <pre class="code bg-black-80 pa4 f4 f3-l center green">
 <code>// Manejo de errores
 <span class="blue">async</span> function getData(userId){
   <span class="red">try </span>{

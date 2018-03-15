@@ -30,7 +30,7 @@ function Callbacks2 (state, emitter) {
         <article class="flex items-center vh-75">
             <ul class="list pl0 center">
                 <li>
-                    <pre class="code bg-black-80 pa4 f3 f2-l center green">
+                    <pre class="code bg-black-80 pa4 f4 f3-l center green">
 function <span class="pink">doSomethingAsync</span>(params, callbackFn) {
     // async action...
     if (err){

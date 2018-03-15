@@ -24,7 +24,7 @@ function Async2(state, emitter) {
         <article class="flex items-center vh-75">
             <ul class=" list pl0 light-gray center">
                 <li class="pa3 pa4-ns">
-                <pre class="code bg-black-80 pa4 f3 f2-l center green">
+                <pre class="code bg-black-80 pa4 f4 f3-l center green">
 <code><span class="blue">async</span> function getData(userId){
   const response = <span class="pink">await</span> fetch('https://example.com/' + userId);
   const result = <span class="pink">await</span> response.json();

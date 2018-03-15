@@ -25,7 +25,7 @@ function Async1(state, emitter) {
     <main class="">
         ${Nav(state, emitter)}
         <article class="flex items-center vh-75">
-            <ul class=" list pl0 f1 f3-m light-gray measure measure-wide-l center">
+            <ul class=" list pl0 f3 f2-l light-gray measure measure-wide-l center">
                 <li class="pa3 pa4-ns bb b--black-10">
                     Objetivo: Hacer que operaciones asíncronas <i>parezcan</i> síncronas.
                 </li>

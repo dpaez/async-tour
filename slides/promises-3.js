@@ -23,8 +23,8 @@ function Promises3 (state, emitter) {
     <main class="">
         ${Nav(state, emitter)}
         <article class="flex  w-100 items-center vh-75">
-            <h3 class="f2-m f-headline-l fw2 mv3 tc w-50">Consideraciones</h3>
-            <ul class="list pl0 f3 f2-l light-gray">
+            <h3 class="f2 f-subheadline-l fw2 mv3 tc w-50">Consideraciones</h3>
+            <ul class="list pl0 f4 f3-l light-gray">
                 <li class="pa3 pa4-ns bb b--black-10">
                     Una promesa se comporta como una función, siempre esperamos un resultado.
                 </li>
